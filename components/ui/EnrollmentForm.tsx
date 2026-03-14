@@ -38,7 +38,7 @@ export default function EnrollmentForm({ onSuccess, compact, title, subtitle }: 
 
     try {
       // NOTE: This URL should be replaced with the actual Google Apps Script Web App URL
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxs0-your-script-id/exec';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzVlKpl6tEXuJaE9Xky4jIMDRvSqk2idh121tXx2B6twq6fJzqwOl_6GzP08LTPvrir/exec';
       
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',

@@ -35,6 +35,7 @@ export default function ContactCTA({ title, ctaText }: ContactCTAProps) {
           >
             {ctaText || "Enroll in any software testing course and unlock a guaranteed, hands-on internship worth ₹10,000 absolutely free. Become the gatekeeper of quality."}
           </motion.p>
+
         </motion.div>
 
         <motion.div
@@ -49,16 +50,17 @@ export default function ContactCTA({ title, ctaText }: ContactCTAProps) {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-white"
-            style={{ textAlign: 'center', width: '100%' }}
+            style={{ textAlign: 'center', flex: 1 }}
           >
-            Chat on WhatsApp
+            WhatsApp
           </a>
-          <button
+          <a
+            href="/contact"
             className="btn-outline-white"
-            onClick={() => document.getElementById('footer')?.scrollIntoView({ behavior: 'smooth' })}
+            style={{ textAlign: 'center', flex: 1 }}
           >
             Contact Us
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

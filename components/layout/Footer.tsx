@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="premium-footer">
       <div className="footer-main">
         <div className="footer-brand-col flex flex-col items-center text-center">
-          <div className="flex justify-center mb-6 relative left-8">
+                  <div className="flex justify-center mb-6">
             <Image 
               src="/Logo.png" 
               alt="CinnAstra Logo" 
@@ -25,19 +25,19 @@ export default function Footer() {
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
-            <li><Link href="#features">Features</Link></li>
-            <li><Link href="#contact">Contact</Link></li>
+            <li><Link href="/#features">Features</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
 
         <div className="footer-nav-col">
           <h5><span className="gradient-keyword">Courses</span></h5>
           <ul>
-            <li><Link href="#">Manual Testing</Link></li>
-            <li><Link href="#">Automation Testing</Link></li>
-            <li><Link href="#">API Automation</Link></li>
-            <li><Link href="#">Performance Testing</Link></li>
-            <li><Link href="#">AI-Driven QA</Link></li>
+            <li><Link href="/courses/fundamentals">Manual Testing</Link></li>
+            <li><Link href="/courses/selenium">Automation Testing</Link></li>
+            <li><Link href="/courses/api-rest">API Automation</Link></li>
+            <li><Link href="/courses/cloud">Performance Testing</Link></li>
+            <li><Link href="/courses/ai">AI-Driven QA</Link></li>
           </ul>
         </div>
 

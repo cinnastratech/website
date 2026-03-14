@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
-const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+const robotoMono = Roboto_Mono({ subsets: ['latin'], display: 'swap', variable: '--font-mono' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://cinnastratech.com'),
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${robotoMono.variable} font-sans`}>
         <Header />
         <main>{children}</main>
         <Footer />

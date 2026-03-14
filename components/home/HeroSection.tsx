@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import PixelBlast from '@/components/ui/PixelBlast';
 
 export default function HeroSection() {
@@ -66,9 +67,9 @@ export default function HeroSection() {
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <button className="cta-button" onClick={scrollToContact}>
+          <Link href="/contact" className="cta-button inline-block">
             Start Your Journey
-          </button>
+          </Link>
         </motion.div>
 
         {/* Trusted Partners Section */}

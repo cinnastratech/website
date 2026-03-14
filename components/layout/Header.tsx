@@ -18,12 +18,14 @@ import {
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
   const [enrollModalOpen, setEnrollModalOpen] = useState(false);
   const pathname = usePathname();
 
   const closeMenu = useCallback(() => {
     setMenuOpen(false);
     setDropdownOpen(false);
+    setMobileCoursesOpen(false);
     setEnrollModalOpen(false);
     document.body.style.overflow = '';
   }, []);
@@ -32,6 +34,7 @@ export default function Header() {
     const next = !menuOpen;
     setMenuOpen(next);
     setDropdownOpen(false);
+    setMobileCoursesOpen(false);
     setEnrollModalOpen(false);
     document.body.style.overflow = next ? 'hidden' : '';
   };
@@ -97,7 +100,7 @@ export default function Header() {
           </div>
 
           <div className="nav-center">
-            <ul className={`nav-links${menuOpen ? ' mobile-active' : ''}`}>
+            <ul className="nav-links">
               <li>
                 <Link href="/" onClick={handleLinkClick}>Home</Link>
               </li>
@@ -109,7 +112,10 @@ export default function Header() {
                   onMouseLeave={() => setDropdownOpen(false)}>
                 <button
                   className="dropdown-toggle"
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setDropdownOpen(!dropdownOpen);
+                  }}
                   aria-expanded={dropdownOpen}
                 >
                   Courses <span className="arrow">▾</span>
@@ -193,6 +199,84 @@ export default function Header() {
             </button>
           </div>
         </nav>
+
+        {/* Mobile Full-Screen Drawer */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              className="mobile-drawer"
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            >
+              <div className="drawer-content">
+                <div className="drawer-header">
+                  <Link href="/" className="logo" onClick={handleLinkClick}>
+                    <Image src="/Logo.png" alt="CinnAstraTech Logo" width={32} height={32} />
+                  </Link>
+                  <span className="drawer-branding-center">CINNASTRA</span>
+                  <button className="drawer-close" onClick={toggleMenu}>✕</button>
+                </div>
+                
+                <ul className="drawer-links">
+                  <li className="drawer-item">
+                    <Link href="/" onClick={handleLinkClick} style={{ color: '#06feb4' }}>Home</Link>
+                  </li>
+                  <li className="drawer-item">
+                    <Link href="/about" onClick={handleLinkClick}>About</Link>
+                  </li>
+                  <li className="drawer-item accordion">
+                    <button 
+                      className="accordion-trigger"
+                      onClick={() => setMobileCoursesOpen(!mobileCoursesOpen)}
+                    >
+                      Courses <span className={`chevron ${mobileCoursesOpen ? 'open' : ''}`}>▾</span>
+                    </button>
+                    <AnimatePresence>
+                      {mobileCoursesOpen && (
+                        <motion.div 
+                          className="accordion-content-wrapper"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          style={{ overflow: 'hidden' }}
+                        >
+                          <ul className="accordion-content">
+                            <li><Link href="/courses/fundamentals" onClick={handleLinkClick}>Software Testing</Link></li>
+                            <li><Link href="/courses/cloud" onClick={handleLinkClick}>Cloud Testing</Link></li>
+                            <li><Link href="/courses/selenium" onClick={handleLinkClick}>Selenium</Link></li>
+                            <li><Link href="/courses/playwright" onClick={handleLinkClick}>Playwright</Link></li>
+                            <li><Link href="/courses/api-rest" onClick={handleLinkClick}>API Rest Assured</Link></li>
+                            <li><Link href="/courses/ai" onClick={handleLinkClick}>AI Testing</Link></li>
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </li>
+                  <li className="drawer-item">
+                    <button className="drawer-btn-link" onClick={scrollToFeatures}>Features</button>
+                  </li>
+                  <li className="drawer-item">
+                    <Link href="/contact" onClick={handleLinkClick}>Contact</Link>
+                  </li>
+                </ul>
+
+                <div className="drawer-footer">
+                  <button 
+                    className="cta-button nav-cta w-full"
+                    onClick={() => {
+                      setEnrollModalOpen(true);
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.header>
 
       <style jsx>{`

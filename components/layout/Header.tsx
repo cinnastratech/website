@@ -7,6 +7,13 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { courseNavItems } from '@/data/siteConfig';
 import EnrollmentForm from '@/components/ui/EnrollmentForm';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,37 +62,23 @@ export default function Header() {
         onClick={closeMenu}
       />
       
-      {/* Enrollment Modal */}
-      <AnimatePresence>
-        {enrollModalOpen && (
-          <div className="enroll-modal-container">
-            <motion.div
-              className="enroll-modal-content"
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button 
-                className="modal-close" 
-                onClick={() => setEnrollModalOpen(false)}
-                aria-label="Close modal"
-              >
-                &times;
-              </button>
-              <div style={{ padding: '0.5rem' }}>
-                <EnrollmentForm 
-                  compact 
-                  title="Enroll Now" 
-                  subtitle="Start your career in Software Testing today."
-                  onSuccess={() => setEnrollModalOpen(false)}
-                />
-              </div>
-            </motion.div>
+      {/* Enrollment Dialog */}
+      <Dialog open={enrollModalOpen} onOpenChange={setEnrollModalOpen}>
+        <DialogContent className="sm:max-w-[500px] border-zinc-800 bg-[#0a0c10] p-8">
+          <DialogHeader>
+            <DialogTitle className="text-3xl font-black">Enroll Now</DialogTitle>
+            <DialogDescription className="text-zinc-400">
+              Start your career in Software Testing today.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4">
+            <EnrollmentForm 
+              compact 
+              onSuccess={() => setEnrollModalOpen(false)}
+            />
           </div>
-        )}
-      </AnimatePresence>
+        </DialogContent>
+      </Dialog>
 
       <motion.header
         initial={{ y: -100, opacity: 0 }}
@@ -203,30 +196,6 @@ export default function Header() {
       </motion.header>
 
       <style jsx>{`
-        .enroll-modal-container {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 3000;
-          padding: 1.5rem;
-          pointer-events: none;
-        }
-        .enroll-modal-content {
-          background: #05070a;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          border-radius: 32px;
-          padding: 2.5rem;
-          max-width: 500px;
-          width: 100%;
-          position: relative;
-          box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
-          pointer-events: auto;
-        }
         .modal-close {
           position: absolute;
           top: 1.5rem;
@@ -248,12 +217,6 @@ export default function Header() {
         .modal-close:hover {
           background: rgba(255, 255, 255, 0.1);
           color: #ffffff;
-        }
-        @media (max-width: 640px) {
-          .enroll-modal-content {
-            padding: 1.5rem;
-            border-radius: 24px;
-          }
         }
       `}</style>
     </>

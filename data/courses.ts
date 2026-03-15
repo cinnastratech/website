@@ -134,7 +134,7 @@ const courses: Course[] = [
       'CI/CD integration for API tests',
     ],
     tools: ['Postman', 'REST Assured', 'Java', 'Newman', 'Jenkins'],
-    trainerId: 'ramasv',
+    trainerId: 'rama',
     ctaTitle: 'Become an API Testing Expert',
     ctaText: 'Enroll now and become an API Testing expert!',
     topics: [

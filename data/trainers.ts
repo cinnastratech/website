@@ -34,11 +34,11 @@ const trainers: Trainer[] = [
     ],
   },
   {
-    id: 'ramasv',
-    name: 'Rama SV',
+    id: 'rama',
+    name: 'Rama',
     subtitle: 'QA, API & Test Governance Expert',
     bio: [
-      'Rama SV is a highly experienced Quality Assurance professional with over 18+ years of industry experience delivering quality solutions across diverse enterprise platforms and global delivery models.',
+      'Rama is a highly experienced Quality Assurance professional with over 18+ years of industry experience delivering quality solutions across diverse enterprise platforms and global delivery models.',
       'She has extensive expertise in test governance, functional validation, API verification, Selenium-driven automation, and ServiceNow testing. Her strengths include test process orchestration, quality control frameworks, stakeholder coordination, and release readiness assessment.',
       'At CinnAstra Tech, Rama focuses on mentoring professionals in practical test management practices, API-focused validation, and disciplined testing approaches.',
     ],

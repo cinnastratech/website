@@ -6,19 +6,99 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     question: "Do I need prior coding experience?",
-    answer: "No prior coding experience is required for our fundamentals course. We start from the basics and guide you step-by-step.",
+    answer: "No. Our courses start from fundamentals, so even beginners with no programming background can learn easily.",
   },
   {
     question: "Do you provide placement assistance?",
-    answer: "Yes, we offer placement support, resume building sessions, and a guaranteed internship with every course enrollment.",
+    answer: "Yes. We provide placement guidance including resume preparation, interview training, mock interviews, and referral support.",
   },
   {
     question: "Are the classes live or recorded?",
-    answer: "We offer live interactive sessions with expert trainers. Recordings are also made available for you to review later.",
+    answer: "All classes are conducted live by industry experts. Recorded sessions may also be provided for revision.",
   },
   {
     question: "What is the duration of the courses?",
-    answer: "Course durations typically range from 4 to 8 weeks, depending on the specific curriculum and depth of the topic.",
+    answer: "Course durations typically range from 4 to 8 weeks, depending on the specific curriculum and topic depth.",
+  },
+  {
+    question: "Will I get hands-on project experience?",
+    answer: "Yes. Our training includes real-time projects, practical exercises, and assignments to provide industry-level experience.",
+  },
+  {
+    question: "Who are the trainers?",
+    answer: "Our trainers are experienced industry professionals with more than 15 years of experience in software testing and automation.",
+  },
+  {
+    question: "Will I receive a certificate after completing the course?",
+    answer: "Yes. Students will receive a Course Completion Certificate from CinnaAstra Tech after successfully finishing the program.",
+  },
+  {
+    question: "What tools and technologies will I learn?",
+    answer: "You will learn Selenium, Playwright, API Testing, Postman, Automation Framework concepts, and Cloud Testing fundamentals.",
+  },
+  {
+    question: "Is this course suitable for freshers?",
+    answer: "Yes. The course is designed for fresh graduates, job seekers, and professionals who want to switch to a testing career.",
+  },
+  {
+    question: "Do you provide interview preparation support?",
+    answer: "Yes. We conduct mock interviews, resume reviews, and share real-time interview questions to help students prepare confidently.",
+  },
+  {
+    question: "What is the batch size?",
+    answer: "We maintain small batch sizes (4–6 students) to provide personalized attention and effective learning.",
+  },
+  {
+    question: "Do you provide internship opportunities?",
+    answer: "Yes. Our program includes internship opportunities through our partner organizations. Students will get exposure to real-time testing projects and industry workflows, which helps them gain practical experience before entering the job market.",
+  },
+  {
+    question: "Will I get course materials and recordings?",
+    answer: "Yes. Students will receive study materials, notes, and recorded sessions for future reference.",
+  },
+  {
+    question: "Can working professionals join this course?",
+    answer: "Yes. Our class timings are designed to be flexible so working professionals can attend without difficulty.",
+  },
+  {
+    question: "What are the payment options available?",
+    answer: "We offer flexible payment options, and details will be shared during the enrolment process.",
+  },
+  {
+    question: "How can I enroll in the course?",
+    answer: "You can enroll through our website registration form or by contacting our team directly via phone or email.",
+  },
+  {
+    question: "Will the course include real-time industry scenarios?",
+    answer: "Yes. Our training includes real-world testing scenarios and practical use cases from industry projects.",
+  },
+  {
+    question: "Do you provide guidance for automation framework development?",
+    answer: "Yes. Students will learn automation framework concepts and how to implement them in real projects.",
+  },
+  {
+    question: "What career opportunities are available after completing this course?",
+    answer: "Students can apply for roles such as Software Test Engineer, Automation Test Engineer, QA Analyst, and SDET roles.",
+  },
+  {
+    question: "How will this course help me in my career growth?",
+    answer: "This course will help you gain practical skills, industry exposure, and confidence to succeed in software testing careers.",
+  },
+  {
+    question: "What kind of projects will I work on during the internship?",
+    answer: "Students will work on real-time software testing projects, including manual testing, automation scenarios, and API testing tasks used in real industry environments.",
+  },
+  {
+    question: "Will I receive an internship certificate?",
+    answer: "Yes. After successfully completing the internship, students will receive an Internship Completion Certificate, which can be added to their resume and professional profiles.",
+  },
+  {
+    question: "How will the internship help my career?",
+    answer: "The internship provides hands-on industry experience, improves practical testing skills, and helps students build confidence for job interviews and real project environments.",
+  },
+  {
+    question: "Is the internship mandatory for all students?",
+    answer: "The internship is recommended for students who want real-time project exposure, but participation may depend on course completion and performance during the training program.",
   }
 ];
 

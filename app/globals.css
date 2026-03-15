@@ -526,7 +526,7 @@ header {
   border: none;
   cursor: pointer;
   z-index: 1001;
-  padding-right: 1.5rem; /* Add right padding as requested */
+  padding-right: 2rem; /* Increased right padding as requested */
 }
 
 .menu-toggle span {

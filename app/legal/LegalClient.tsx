@@ -103,80 +103,101 @@ export default function LegalClient() {
   };
 
   return (
-    <main style={{ backgroundColor: '#020505', minHeight: '100vh', color: '#ffffff', paddingTop: '140px', paddingBottom: '100px' }}>
+    <main style={{ backgroundColor: '#020505', minHeight: '100vh', color: '#ffffff', paddingTop: 'clamp(100px, 15vh, 140px)', paddingBottom: '100px' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.5rem' }}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          style={{ textAlign: 'center', marginBottom: '5rem' }}
-        >
-          <h1 style={{ fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-2px', lineHeight: 1 }}>
-            Legal <span style={{ color: 'var(--primary-teal)' }}>Compliance</span>
-          </h1>
-          <p style={{ color: '#9ca3af', fontSize: '1.25rem', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
-            Transparency and professional conduct are at the core of our operations. Review our official terms and policies.
-          </p>
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '0.75rem', 
-          marginBottom: '4rem',
-          flexWrap: 'wrap',
-          padding: '4px',
-          background: 'rgba(255, 255, 255, 0.03)',
-          borderRadius: '100px',
-          width: 'fit-content',
-          margin: '0 auto 4rem auto',
-          border: '1px solid rgba(255, 255, 255, 0.05)'
-        }}>
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              style={{
-                padding: '1rem 2rem',
-                borderRadius: '100px',
-                border: 'none',
-                background: activeTab === tab.id ? 'var(--primary-teal)' : 'transparent',
-                color: activeTab === tab.id ? '#020505' : '#ffffff',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-                fontSize: '1rem',
-                boxShadow: activeTab === tab.id ? '0 10px 30px rgba(6, 254, 180, 0.2)' : 'none'
-              }}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Tab Content */}
-        <div style={{ 
-          background: 'rgba(255, 255, 255, 0.02)', 
-          backdropFilter: 'blur(20px)',
-          border: '1px solid rgba(255, 255, 255, 0.05)', 
-          borderRadius: '32px', 
-          padding: '4rem',
-          minHeight: '500px',
-          boxShadow: '0 40px 100px rgba(0, 0, 0, 0.4)'
-        }}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
-            >
-              {content[activeTab as keyof typeof content]}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8 }}
+           style={{ textAlign: 'center', marginBottom: 'clamp(3rem, 8vw, 5rem)' }}
+         >
+           <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: 900, marginBottom: '1.5rem', letterSpacing: '-2px', lineHeight: 1 }}>
+             Legal <span style={{ color: 'var(--primary-teal)' }}>Compliance</span>
+           </h1>
+           <p style={{ color: '#9ca3af', fontSize: 'clamp(1rem, 3vw, 1.25rem)', maxWidth: '700px', margin: '0 auto', lineHeight: 1.6 }}>
+             Transparency and professional conduct are at the core of our operations. Review our official terms and policies.
+           </p>
+         </motion.div>
+ 
+         {/* Tab Navigation */}
+         <div 
+           className="legal-tabs-scroll-container"
+           style={{ 
+             display: 'flex', 
+             justifyContent: 'center', 
+             gap: '0.75rem', 
+             marginBottom: 'clamp(2rem, 6vw, 4rem)',
+             padding: '4px',
+             background: 'rgba(255, 255, 255, 0.03)',
+             borderRadius: '100px',
+             width: 'fit-content',
+             margin: '0 auto clamp(2rem, 6vw, 4rem) auto',
+             border: '1px solid rgba(255, 255, 255, 0.05)',
+             overflowX: 'auto',
+             maxWidth: '100%',
+             scrollbarWidth: 'none',
+             msOverflowStyle: 'none',
+             WebkitOverflowScrolling: 'touch'
+           }}
+         >
+           <style jsx>{`
+             .legal-tabs-scroll-container::-webkit-scrollbar {
+               display: none;
+             }
+             @media (max-width: 640px) {
+               .legal-tabs-scroll-container {
+                 justify-content: flex-start;
+                 border-radius: 16px;
+                 padding: 8px;
+                 flex-wrap: nowrap;
+               }
+             }
+           `}</style>
+           {tabs.map((tab) => (
+             <button
+               key={tab.id}
+               onClick={() => setActiveTab(tab.id)}
+               style={{
+                 padding: 'clamp(0.75rem, 2vw, 1rem) clamp(1.2rem, 4vw, 2rem)',
+                 borderRadius: '100px',
+                 border: 'none',
+                 background: activeTab === tab.id ? 'var(--primary-teal)' : 'transparent',
+                 color: activeTab === tab.id ? '#020505' : '#ffffff',
+                 fontWeight: 700,
+                 cursor: 'pointer',
+                 transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                 fontSize: 'clamp(0.85rem, 2.5vw, 1rem)',
+                 boxShadow: activeTab === tab.id ? '0 10px 30px rgba(6, 254, 180, 0.2)' : 'none',
+                 whiteSpace: 'nowrap'
+               }}
+             >
+               {tab.label}
+             </button>
+           ))}
+         </div>
+ 
+         {/* Tab Content */}
+         <div style={{ 
+           background: 'rgba(255, 255, 255, 0.02)', 
+           backdropFilter: 'blur(20px)',
+           border: '1px solid rgba(255, 255, 255, 0.05)', 
+           borderRadius: 'clamp(24px, 5vw, 32px)', 
+           padding: 'clamp(1.5rem, 6vw, 4rem)',
+           minHeight: '400px',
+           boxShadow: '0 40px 100px rgba(0, 0, 0, 0.4)'
+         }}>
+           <AnimatePresence mode="wait">
+             <motion.div
+               key={activeTab}
+               initial={{ opacity: 0, y: 10 }}
+               animate={{ opacity: 1, y: 0 }}
+               exit={{ opacity: 0, y: -10 }}
+               transition={{ duration: 0.4 }}
+             >
+               {content[activeTab as keyof typeof content]}
+             </motion.div>
+           </AnimatePresence>
+         </div>
       </div>
     </main>
   );

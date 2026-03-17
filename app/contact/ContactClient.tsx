@@ -23,8 +23,8 @@ export default function ContactClient() {
     {
       icon: <Mail size={24} />,
       label: "Email",
-      values: ["contact@cinnastratech.com"],
-      link: "mailto:contact@cinnastratech.com"
+      values: ["Startlearning@Cinnastratech.com"],
+      link: "mailto:Startlearning@Cinnastratech.com"
     }
   ];
 

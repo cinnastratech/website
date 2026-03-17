@@ -83,8 +83,8 @@ export default function HeroSection() {
           <span className="partners-title" style={{ textAlign: 'center', margin: '0 auto', display: 'block' }}>
             Trusted Industry Partners
           </span>
-          <div className="partners-logos" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '0.5rem' }}>
-            <div className="partner-item" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
+          <div className="partners-logos" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '0.5rem', gap: '2rem' }}>
+            <Link href="https://mergex.in" target="_blank" rel="noopener noreferrer" className="partner-item" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', textDecoration: 'none', color: 'inherit' }}>
               <Image 
                 src="/android-chrome-192x192.png" 
                 alt="MergeX" 
@@ -94,7 +94,18 @@ export default function HeroSection() {
                 style={{ opacity: 0.8 }}
               />
               <span className="partner-name" style={{ display: 'block', textAlign: 'center', width: '100%' }}>mergex</span>
-            </div>
+            </Link>
+            <Link href="https://www.rupenet.com/" target="_blank" rel="noopener noreferrer" className="partner-item" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', textDecoration: 'none', color: 'inherit' }}>
+              <Image 
+                src="/Rupeynet.png" 
+                alt="Rupenet" 
+                width={40} 
+                height={40} 
+                className="partner-logo"
+                style={{ opacity: 0.8 }}
+              />
+              <span className="partner-name" style={{ display: 'block', textAlign: 'center', width: '100%' }}>Rupenet</span>
+            </Link>
           </div>
         </motion.div>
       </div>

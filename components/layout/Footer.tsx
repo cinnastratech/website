@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="footer-nav-col">
           <h5><span className="gradient-keyword">Contact</span></h5>
           <ul>
-            <li>Email: <a href="mailto:contact@cinnastratech.com">contact@cinnastratech.com</a></li>
+            <li>Email: <a href="mailto:Startlearning@Cinnastratech.com">Startlearning@Cinnastratech.com</a></li>
             <li>Phone: <a href="tel:+917305629985">+91-7305629985</a></li>
           </ul>
         </div>
@@ -52,7 +52,7 @@ export default function Footer() {
 
       <div className="footer-bottom-bar">
         <p>
-          © {new Date().getFullYear()} CinnAstra Technologies. All rights reserved. | Crafted by <a href="https://mergex.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#06feb4]" style={{ color: 'inherit', textDecoration: 'none' }}>Mergex</a>
+          © {new Date().getFullYear()} CinnAstra Technologies. All rights reserved. | Recreated by <a href="https://mergex.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#06feb4]" style={{ color: 'inherit', textDecoration: 'none' }}>Mergex</a>
         </p>
         <div className="footer-legal">
           <Link href="/legal">Terms & Conditions</Link>

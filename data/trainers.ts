@@ -3,18 +3,19 @@ import { Timer, Activity, Building2, Cloud, FlaskConical, Blocks, Link, Plug, Bo
 
 const trainers: Trainer[] = [
   {
-    id: 'madhumita',
-    name: 'Madhumita',
-    subtitle: 'Software Cloud QA & Test Management Professional',
+    id: 'madhumitha',
+    name: 'Madhumitha',
+    subtitle: 'Experienced Cloud QA & Test Management Specialist',
     bio: [
-      'Madhumita is a Software QA professional with 15+ years of extensive experience across Agile and Scrum-driven delivery models, enterprise domain-focused testing, and cloud-based application validation. She brings deep expertise in Functional testing practices, requirement analysis, sprint-level quality planning, and continuous quality alignment within fast-paced Agile environments. Her strengths include Scrum facilitation from a QA perspective, cross-functional collaboration, domain-intensive testing strategies, and cloud platform quality assurance, ensuring business-critical systems meet both functional and non-functional expectations.',
-      'At CinnAstra Tech, Madhu delivers outcome-driven training focused on Testing processes, Agile-based execution, domain-oriented testing, and cloud-enabled validation practices. Her methodical and learner-focused approach helps professionals strengthen testing fundamentals, apply quality standards effectively, and contribute with confidence across real project environments.',
+      'Madhumitha is an experienced Cloud QA and Test Management specialist with 15+ years of experience in enterprise-level quality assurance. Her expertise spans Agile/Scrum delivery, enterprise domain testing, and cloud validation across major platforms including AWS and Azure.',
+      'She has extensive experience working in cloud testing environments, helping teams validate applications across Public, Private, and Hybrid cloud infrastructures. Her practical approach to teaching complex cloud concepts has made her a beloved mentor among students, particularly valued for her ability to break down intricate concepts into clear, actionable knowledge.',
+      'At CinnAstra Tech, Madhumitha leads the Cloud Testing track, guiding students through real-world cloud testing scenarios, performance testing strategies, and security validation in cloud environments. Students consistently highlight her patience, clarity, and real-world insights as key factors in their learning success.',
     ],
     highlights: [
       { icon: Timer, label: '15+ Years', value: 'QA Experience' },
-      { icon: Activity, label: 'Agile & Scrum', value: 'Delivery Focus' },
-      { icon: Building2, label: 'Domain-Intensive', value: 'Testing Strategies' },
-      { icon: Cloud, label: 'Cloud Validation', value: 'Quality Assurance' },
+      { icon: Cloud, label: 'AWS & Azure', value: 'Cloud Validation' },
+      { icon: Activity, label: 'Agile/Scrum', value: 'Expert Delivery' },
+      { icon: Building2, label: 'Enterprise', value: 'Domain Testing' },
     ],
   },
   {

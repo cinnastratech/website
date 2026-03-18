@@ -91,10 +91,15 @@ export default function Header() {
       >
         <nav className="navbar">
           <div className="nav-left">
-            <Link href="/" className="logo" onClick={handleLinkClick}>
+            <Link href="/" className="logo" onClick={() => {
+              if (pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+              handleLinkClick();
+            }}>
               <Image src="/Logo.png" alt="CinnAstraTech Logo" width={32} height={32} className="logo-img" priority />
               <span className="logo-text">
-                CINNASTRA
+                CinnAstra Tech
               </span>
             </Link>
           </div>
@@ -215,7 +220,7 @@ export default function Header() {
                   <Link href="/" className="logo" onClick={handleLinkClick}>
                     <Image src="/Logo.png" alt="CinnAstraTech Logo" width={32} height={32} />
                   </Link>
-                  <span className="drawer-branding-center">CINNASTRA</span>
+                  <span className="drawer-branding-center">CinnAstra Tech</span>
                   <button className="drawer-close" onClick={toggleMenu}>✕</button>
                 </div>
                 

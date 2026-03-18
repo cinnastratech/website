@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 
 export const metadata: Metadata = {
-  title: 'Home | CinnAstraTech – Innovate Beyond Boundaries',
-  description: 'Master software testing with CinnAstraTech. Expert-led courses in Selenium, Playwright, Cloud Testing, and AI-powered QA. Guaranteed internships available.',
+  title: 'Home | CinnAstra Tech – Innovate Beyond Boundaries',
+  description: 'Master software testing with CinnAstra Tech. Expert-led courses in Selenium, Playwright, Cloud Testing, and AI-powered QA. Guaranteed internships available.',
 };
 import AudienceSection from '@/components/home/AudienceSection';
 import CoursesOverview from '@/components/home/CoursesOverview';

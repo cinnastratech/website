@@ -9,12 +9,13 @@ export default function Footer() {
                   <div className="flex justify-center mb-6">
             <Image 
               src="/Logo.png" 
-              alt="CinnAstra Logo" 
+              alt="CinnAstra Tech Logo" 
               width={150} 
               height={100} 
               className="h-20 w-auto object-contain"
             />
           </div>
+          <h3 className="footer-brand-name text-2xl font-bold mb-2">CinnAstra Tech</h3>
           <p className="footer-tagline">
             Innovate Beyond Boundaries
           </p>
@@ -52,7 +53,7 @@ export default function Footer() {
 
       <div className="footer-bottom-bar">
         <p>
-          © {new Date().getFullYear()} CinnAstra Technologies. All rights reserved. | Recreated by <a href="https://mergex.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#06feb4]" style={{ color: 'inherit', textDecoration: 'none' }}>Mergex</a>
+          © {new Date().getFullYear()} CinnAstra Tech. All rights reserved. | Recreated by <a href="https://mergex.in" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#06feb4]" style={{ color: 'inherit', textDecoration: 'none' }}>Mergex</a>
         </p>
         <div className="footer-legal">
           <Link href="/legal">Terms & Conditions</Link>

@@ -37,24 +37,25 @@ export default function EnrollmentForm({ onSuccess, compact, title, subtitle }: 
     setStatus('idle');
 
     try {
-      // NOTE: This URL should be replaced with the actual Google Apps Script Web App URL
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9EoZQNPzaDBnwgaa1CTaob_NuY3CZThRM926WrXsv__hXCRDz6k53T5UtDlRcPtPL/exec';
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyqRrIsWyvjyMlmsmfXLUMOZvyVeKBCO_kc7kyswHduW2f2yDCvT6jQcTvNQUOYO4Q/exec';
       
-      const response = await fetch(SCRIPT_URL, {
+      const formDataToSend = new URLSearchParams();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('course', formData.course);
+      formDataToSend.append('timestamp', new Date().toISOString());
+      formDataToSend.append('type', 'Lead');
+
+      await fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors', // Common for Google Apps Script
+        mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-          type: 'Lead'
-        }),
+        body: formDataToSend.toString(),
       });
 
-      // Since mode is 'no-cors', we can't reliably check response.ok
-      // We'll assume success if no error is thrown
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', course: 'Software Testing Fundamentals' });
       if (onSuccess) setTimeout(onSuccess, 3000);

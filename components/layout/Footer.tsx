@@ -49,17 +49,6 @@ export default function Footer() {
             <li>Phone: <a href="tel:+917305629985">+91-7305629985</a></li>
           </ul>
         </div>
-
-        <div className="footer-nav-col">
-          <h5><span className="gradient-keyword">Payments</span></h5>
-          <ul className="payment-list text-zinc-400 text-sm space-y-2">
-            <li className="flex items-center gap-2">✓ Bank Transfer</li>
-            <li className="flex items-center gap-2">✓ UPI / QR Code</li>
-            <li className="flex items-center gap-2">✓ Debit Card</li>
-            <li className="flex items-center gap-2">✓ PayPal</li>
-            <li className="flex items-center gap-2">✓ Installment Options</li>
-          </ul>
-        </div>
       </div>
 
       <div className="footer-bottom-bar">

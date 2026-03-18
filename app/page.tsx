@@ -11,6 +11,7 @@ import FeaturesSection from '@/components/home/FeaturesSection';
 import AddonsSection from '@/components/home/AddonsSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import FAQSection from '@/components/home/FAQSection';
+import PaymentOptions from '@/components/course/PaymentOptions';
 import ContactCTA from '@/components/ui/ContactCTA';
 
 export default function HomePage() {
@@ -23,6 +24,7 @@ export default function HomePage() {
       <AddonsSection />
       <TestimonialsSection />
       <FAQSection />
+      <PaymentOptions />
       <div id="contact">
         <ContactCTA />
       </div>

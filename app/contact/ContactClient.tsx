@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageSquare, Mail } from "lucide-react";
 import EnrollmentForm from "@/components/ui/EnrollmentForm";
 import FAQSection from "@/components/home/FAQSection";
+import PaymentOptions from "@/components/course/PaymentOptions";
 
 export default function ContactClient() {
   const contactInfo = [
@@ -89,6 +90,12 @@ export default function ContactClient() {
         </div>
       </div>
       
+      <div className="contact-payment-section">
+        <div className="contact-container" style={{ paddingBottom: '3rem' }}>
+          <PaymentOptions />
+        </div>
+      </div>
+
       <div className="contact-faq-section">
         <FAQSection />
       </div>
@@ -167,6 +174,11 @@ export default function ContactClient() {
           border-radius: 32px;
           padding: 3rem;
           box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+        }
+        .contact-payment-section {
+          margin-top: 5rem;
+          padding-top: 5rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         .contact-faq-section {
           margin-top: 5rem;

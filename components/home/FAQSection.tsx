@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     question: "What are the payment options available?",
-    answer: "We offer flexible payment options, and details will be shared during the enrolment process.",
+    answer: "We offer several secure payment methods: Bank Transfer (NEFT/RTGS), UPI / QR Code, Debit Card, and PayPal for international students. We also provide flexible installment plans to make our courses accessible to everyone.",
   },
   {
     question: "How can I enroll in the course?",

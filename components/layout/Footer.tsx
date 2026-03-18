@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="premium-footer">
       <div className="footer-main">
         <div className="footer-brand-col flex flex-col items-center text-center">
-                  <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-6">
             <Image 
               src="/Logo.png" 
               alt="CinnAstra Tech Logo" 
@@ -47,6 +47,17 @@ export default function Footer() {
           <ul>
             <li>Email: <a href="mailto:Startlearning@Cinnastratech.com">Startlearning@Cinnastratech.com</a></li>
             <li>Phone: <a href="tel:+917305629985">+91-7305629985</a></li>
+          </ul>
+        </div>
+
+        <div className="footer-nav-col">
+          <h5><span className="gradient-keyword">Payments</span></h5>
+          <ul className="payment-list text-zinc-400 text-sm space-y-2">
+            <li className="flex items-center gap-2">✓ Bank Transfer</li>
+            <li className="flex items-center gap-2">✓ UPI / QR Code</li>
+            <li className="flex items-center gap-2">✓ Debit Card</li>
+            <li className="flex items-center gap-2">✓ PayPal</li>
+            <li className="flex items-center gap-2">✓ Installment Options</li>
           </ul>
         </div>
       </div>

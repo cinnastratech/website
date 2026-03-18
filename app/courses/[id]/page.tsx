@@ -7,6 +7,7 @@ import TopicsSection from '@/components/course/TopicsSection';
 import TrainerSection from '@/components/course/TrainerSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import ContactCTA from '@/components/ui/ContactCTA';
+import PaymentOptions from '@/components/course/PaymentOptions';
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -43,6 +44,7 @@ export default async function CoursePage({ params }: Props) {
       {trainer && <TrainerSection trainer={trainer} />}
       <TopicsSection topics={course.topics} />
       <TestimonialsSection />
+      <PaymentOptions />
       <ContactCTA
         title={course.ctaTitle}
         ctaText={course.ctaText}

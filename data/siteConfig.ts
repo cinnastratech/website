@@ -2,7 +2,7 @@ import { ContactInfo, CourseNavItem, AudienceCard } from '@/types';
 
 export const contactInfo: ContactInfo = {
   phone1: '+917305629985',
-  phone2: '+918754568413',
+  phone2: '+918015379310',
   whatsapp: '919629227944',
   email: 'admin@cinnastratech.com',
 };

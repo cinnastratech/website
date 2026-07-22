@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="footer-nav-col">
           <h5><span className="gradient-keyword">Contact</span></h5>
           <ul>
-            <li>Email: <a href="mailto:Startlearning@Cinnastratech.com">Startlearning@Cinnastratech.com</a></li>
+            <li>Email: <a href="mailto:admin@cinnastratech.com">admin@cinnastratech.com</a></li>
             <li>Phone: <a href="tel:+917305629985">+91-7305629985</a></li>
           </ul>
         </div>

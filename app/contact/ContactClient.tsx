@@ -12,7 +12,7 @@ export default function ContactClient() {
     {
       icon: <Phone size={24} />,
       label: "Call Us",
-      values: ["+91-7305629985", "+91-8754568413"],
+      values: ["+91-7305629985", "+91-8015379310"],
       link: "tel:+917305629985"
     },
     {
@@ -24,8 +24,8 @@ export default function ContactClient() {
     {
       icon: <Mail size={24} />,
       label: "Email",
-      values: ["Startlearning@Cinnastratech.com"],
-      link: "mailto:Startlearning@Cinnastratech.com"
+      values: ["admin@cinnastratech.com"],
+      link: "mailto:admin@cinnastratech.com"
     }
   ];
 
@@ -42,8 +42,9 @@ export default function ContactClient() {
             className="contact-info-col"
           >
             <h1 className="contact-title">
-              Get in <span style={{ color: 'var(--primary-teal)' }}>Touch</span>
+              Get in <span style={{ color: "var(--primary-teal)" }}>Touch</span>
             </h1>
+
             <p className="contact-description">
               Have questions about our courses or careers? Reach out to us and our mentors will guide you.
             </p>
@@ -54,19 +55,23 @@ export default function ContactClient() {
                   <div className="contact-icon-wrapper">
                     {item.icon}
                   </div>
-                  <div>
+
+                  <div className="contact-info-content">
                     <h3 className="contact-info-label">
                       {item.label}
                     </h3>
-                    {item.values.map((val, vIdx) => (
-                      <a 
-                        key={vIdx} 
-                        href={item.link}
-                        className="contact-info-value"
-                      >
-                        {val}
-                      </a>
-                    ))}
+
+                    <div className="contact-info-values">
+                      {item.values.map((val, vIdx) => (
+                        <a
+                          key={vIdx}
+                          href={item.link}
+                          className="contact-info-value"
+                        >
+                          {val}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -81,8 +86,8 @@ export default function ContactClient() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="contact-form-card"
           >
-            <EnrollmentForm 
-              title="Apply for Enrollment" 
+            <EnrollmentForm
+              title="Apply for Enrollment"
               subtitle="Fill the form and we will call you back within 24 hours."
             />
           </motion.div>
@@ -91,7 +96,10 @@ export default function ContactClient() {
       </div>
       
       <div className="contact-payment-section">
-        <div className="contact-container" style={{ paddingBottom: '3rem' }}>
+        <div
+          className="contact-container"
+          style={{ paddingBottom: "3rem" }}
+        >
           <PaymentOptions />
         </div>
       </div>
@@ -108,39 +116,46 @@ export default function ContactClient() {
           padding-top: 140px;
           padding-bottom: 100px;
         }
+
         .contact-container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 1.5rem;
         }
+
         .contact-grid {
           display: grid;
           grid-template-columns: 1fr 1.5fr;
           gap: 5rem;
           align-items: start;
         }
+
         .contact-title {
           font-size: clamp(2.5rem, 5vw, 4rem);
           font-weight: 900;
           margin-bottom: 1.5rem;
           letter-spacing: -2px;
         }
+
         .contact-description {
           color: #9ca3af;
           font-size: 1.2rem;
           margin-bottom: 3rem;
           line-height: 1.6;
         }
+
         .contact-info-list {
           display: flex;
           flex-direction: column;
           gap: 2.5rem;
         }
+
         .contact-info-item {
           display: flex;
           gap: 1.5rem;
           align-items: flex-start;
         }
+
         .contact-icon-wrapper {
           background: rgba(6, 254, 180, 0.1);
           padding: 1rem;
@@ -148,6 +163,13 @@ export default function ContactClient() {
           color: var(--primary-teal);
           border: 1px solid rgba(6, 254, 180, 0.2);
         }
+
+        .contact-info-content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
         .contact-info-label {
           font-size: 0.9rem;
           color: #6b7280;
@@ -156,17 +178,32 @@ export default function ContactClient() {
           font-weight: 700;
           margin-bottom: 0.5rem;
         }
+
+        .contact-info-values {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.4rem;
+        }
+
         .contact-info-value {
           display: block;
+          margin: 0;
+          padding: 0;
           font-size: 1.25rem;
           font-weight: 600;
+          line-height: 1.25;
+          white-space: nowrap;
+          text-align: left;
           color: #ffffff;
           text-decoration: none;
           transition: color 0.3s ease;
         }
+
         .contact-info-value:hover {
           color: var(--primary-teal);
         }
+
         .contact-form-card {
           background: rgba(255, 255, 255, 0.02);
           backdrop-filter: blur(20px);
@@ -175,11 +212,13 @@ export default function ContactClient() {
           padding: 3rem;
           box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
         }
+
         .contact-payment-section {
           margin-top: 5rem;
           padding-top: 5rem;
           border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .contact-faq-section {
           margin-top: 5rem;
         }
@@ -189,9 +228,11 @@ export default function ContactClient() {
             grid-template-columns: 1fr;
             gap: 4rem;
           }
+
           .contact-main {
             padding-top: 100px;
           }
+
           .contact-form-card {
             padding: 2rem;
           }
@@ -201,13 +242,16 @@ export default function ContactClient() {
           .contact-title {
             font-size: 2.5rem;
           }
+
           .contact-description {
             font-size: 1.1rem;
             margin-bottom: 2rem;
           }
+
           .contact-info-value {
             font-size: 1.1rem;
           }
+
           .contact-info-list {
             gap: 2rem;
           }
